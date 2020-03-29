@@ -6,6 +6,8 @@ Inspired by [kyokomi](https://github.com/kyokomi/emoji)
 and [carpedm20](https://github.com/carpedm20/emoji).
 Emojis codemap is from [muan](https://github.com/muan/emojilib).
 
+Go to [Emoji searcher](https://emoji.muan.co/) for a searchable list of supported emojis.
+
 # Usage
 
 From command line:
