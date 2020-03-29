@@ -1,6 +1,3 @@
-# todo
-#  - package and publish
-#  - cheatsheet
 import nimojipkg\codemap, strtabs, os
 
 export emojiCodemap, emojiCategories
