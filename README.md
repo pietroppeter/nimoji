@@ -38,7 +38,7 @@ From Nim:
 ```nim
 import nimoji
 
-assert "I :red_heart: :pizza: and :beer:".emojize == "I ❤️ 🍕 and 🍺"
+assert "I :heart: :pizza: and :beer:".emojize == "I ❤️ 🍕 and 🍺"
 assert "The emoji for  ::spaghetti:: is :spaghetti:".emojize == "The emoji for :spaghetti: is 🍝"
 
 # substitution is style insensitive
