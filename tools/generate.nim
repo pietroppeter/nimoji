@@ -41,4 +41,8 @@ for k, v in emojis:
 
 include "codemap.nimf"
 
-r"nimojipkg\codemap.nim".writeFile(generateCodemap(emojis, emojiCategories))
+let filename = r"src\nimojipkg\codemap.nim"
+
+filename.writeFile(generateCodemap(emojis, emojiCategories))
+
+echo "succesfully generated " & filename

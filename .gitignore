@@ -1,4 +1,3 @@
 *.exe
-nimoji
-nimojipkg\codemap
+nimojipkg\nimoji
 tools\generate
