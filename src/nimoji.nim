@@ -7,13 +7,8 @@ proc emojize*(s: string): string =  # it tells me that this a side effects but I
     i = 0
     pattern = ""
   while i < s.len:
-    # skip double ':' at beginning of pattern and replace with single ':'
-    if s[i] == ':' and (i + 1) < s.len and s[i + 1] == ':':
-      inc i
-      inc i
-      result.add ":"
     # start extracting a pattern if you find ':' followed by at least two other characters the first of which is allowed (pattern :a: is valid)
-    elif s[i] == ':' and (i + 2) < s.len and s[i + 1] in allowedChars:
+    if s[i] == ':' and (i + 2) < s.len and s[i + 1] in allowedChars:
       inc i
       # a pattern is extracted until you find allowed chars
       while i < s.len and s[i] in allowedChars:

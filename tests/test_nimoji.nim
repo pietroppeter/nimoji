@@ -5,9 +5,13 @@ when isMainModule:
     for c in s:
       doAssert c in allowedChars, "pattern " & s & " has character " & c & " which is not allowed!"
   import nimoji
-  doAssert "I :heart: :pizza: and :beer:".emojize == "I ❤️ 🍕 and 🍺"
-  doAssert "The emoji for ::spaghetti:: is :spaghetti:".emojize == "The emoji for :spaghetti: is 🍝"
-  doAssert "you say :to_ma_to:, I say :ToMaTo:".emojize == "you say 🍅, I say 🍅"
+
+  template check(result, expected: string) =
+    doAssert result == expected, "Failed test\nExpected: " & expected & "\nResult: " & result
+  
+  check "I :heart: :pizza: and :beer:".emojize, "I ❤️ 🍕 and 🍺"
+  check "The emoji for spaghetti: :spaghetti:".emojize, "The emoji for spaghetti: 🍝"
+  check "you say :to_ma_to:, I say :ToMaTo:".emojize, "you say 🍅, I say 🍅"
   
   echo emojiCodemap.len, " emojis in codemap."
   echo emojiCategories.len, " categories."
