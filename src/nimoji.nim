@@ -1,4 +1,4 @@
-import nimojipkg\codemap, strtabs, os
+import nimojipkg/codemap, strtabs, os
 
 export emojiCodemap, emojiCategories, allowedChars
 
