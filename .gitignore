@@ -1,3 +1,4 @@
 *.exe
-nimojipkg\nimoji
-tools\generate
+src/nimoji
+tools/generate
+tests/test_nimoji
