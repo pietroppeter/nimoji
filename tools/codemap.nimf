@@ -12,10 +12,6 @@ let
   emojiCodemap* = {
 ${emojis.toEntries}
   }.newStringTable(modeStyleInsensitive)
-
-var
-  emojiCategories* = initOrderedTable[string, seq[string]]()
-
-#for category, keywords in emojiCategories:
-emojiCategories["$category"] = ${keywords}
-#end for
+  emojiCategories* = {
+${emojiCategories.toEntries}
+  }.toOrderedTable

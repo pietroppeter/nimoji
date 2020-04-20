@@ -1,4 +1,4 @@
-import httpClient, strutils, json, tables
+import httpClient, strutils, json, tables, os
 
 let
   source = "https://raw.githubusercontent.com/muan/emojilib/master/emojis.json"
@@ -39,9 +39,23 @@ for k, v in emojis:
   else:
     emojiCategories[category] = @[k]
 
+proc toEntry(category: string, keywords: seq[string]): string =
+  result.add '"'
+  result.add category
+  result.add '"'
+  result.add ": "
+  result.add $keywords
+
+proc toEntries(emojiCategories: OrderedTable[string, seq[string]]): string =
+  var
+    s = newSeqOfCap[string](emojiCategories.len)
+  for category, keywords in emojiCategories:
+    s.add toEntry(category, keywords)
+  s.join(",\n").indent(4)
+
 include "codemap.nimf"
 
-let filename = r"src\nimojipkg\codemap.nim"
+let filename = "src" / "nimojipkg" / "codemap.nim"
 
 filename.writeFile(generateCodemap(emojis, emojiCategories))
 
