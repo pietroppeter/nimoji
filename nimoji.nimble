@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "Pietro Peterlongo"
 description   = "🍕🍺 emoji support for Nim 👑 and the world 🌍"
 license       = "MIT"
@@ -17,6 +17,8 @@ requires "nim >= 1.0.6"
 
 task test, "Runs the test suite":
   exec "nim c -r tests/test_nimoji"
+  exec "nim c -r src/nimoji"
 
 task generate, "Generates codemap":
   exec "nim c -r tools/generate"
+
