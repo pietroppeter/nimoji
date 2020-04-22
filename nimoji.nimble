@@ -4,8 +4,9 @@ version       = "0.1.1"
 author        = "Pietro Peterlongo"
 description   = "🍕🍺 emoji support for Nim 👑 and the world 🌍"
 license       = "MIT"
-skipDirs      = @["tools"] 
-bin           = @["src/nimoji"]
+skipDirs      = @["tools"]
+srcDir        = "src"
+bin           = @["nimoji"]
 
 
 
