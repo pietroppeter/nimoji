@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.1"
+version       = "0.1.2"
 author        = "Pietro Peterlongo"
 description   = "🍕🍺 emoji support for Nim 👑 and the world 🌍"
 license       = "MIT"
