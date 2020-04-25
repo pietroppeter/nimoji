@@ -1,11 +1,11 @@
 # Package
 
-version       = "0.1.3"
+version       = "0.1.4"
 author        = "Pietro Peterlongo"
 description   = "🍕🍺 emoji support for Nim 👑 and the world 🌍"
 license       = "MIT"
 srcDir        = "src"
-installDirs   = @["."]
+installext    = @["nim"]
 bin           = @["nimoji"]
 
 
