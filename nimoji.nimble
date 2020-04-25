@@ -4,10 +4,9 @@ version       = "0.1.2"
 author        = "Pietro Peterlongo"
 description   = "🍕🍺 emoji support for Nim 👑 and the world 🌍"
 license       = "MIT"
-skipDirs      = @["tools"]
 srcDir        = "src"
+installDirs   = @["."]
 bin           = @["nimoji"]
-
 
 
 # Dependencies
