@@ -39,7 +39,7 @@ From Nim:
 import nimoji
 
 assert "I :heart: :pizza: and :beer:".emojize == "I ❤️ 🍕 and 🍺"
-assert "The emoji for  ::spaghetti:: is :spaghetti:".emojize == "The emoji for :spaghetti: is 🍝"
+assert "The emoji for spaghetti: :spaghetti:".emojize, "The emoji for spaghetti: 🍝"
 
 # substitution is style insensitive
 assert "you say :to_ma_to: I say :ToMaTo:".emojize == "you say 🍅 I say 🍅"
