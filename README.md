@@ -1,6 +1,6 @@
 # nimoji
 
-🍕🍺 emoji support for Nim 👑 and the world 🌍.
+<span title=":pizza:">🍕</span><span title=":beer:">🍺</span> emoji support for Nim 👑 and the world 🌍.
 
 Inspired by [kyokomi](https://github.com/kyokomi/emoji)
 and [carpedm20](https://github.com/carpedm20/emoji).
