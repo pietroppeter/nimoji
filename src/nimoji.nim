@@ -56,7 +56,7 @@ For a searchable list of supported emoji keywords: https://emoji.muan.co/"""
   elif params.len == 1:
     let
       par = params[0]
-    if par.existsFile:
+    if par.fileExists:
       echo par.readFile.emojize
     else:
       echo par.emojize
